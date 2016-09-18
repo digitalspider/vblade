@@ -1,0 +1,8 @@
+#set ( $dataPoints = "" )
+#foreach ($data in $dataList)
+#if( $dataPoints.length()>0 )
+	#set( $dataPoints = "${dataPoints}," )
+#end
+#set( $dataPoints = "${dataPoints}{x:$Integer.parseInt($data.time), y:$data.value}" )
+#end
+dataPoints.push($dataPoints);

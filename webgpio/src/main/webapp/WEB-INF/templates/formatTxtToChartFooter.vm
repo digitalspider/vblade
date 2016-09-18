@@ -1,0 +1,27 @@
+	dataSeries.dataPoints = dataPoints;
+	data.push(dataSeries);
+
+	//Better to construct options first and then pass it as a parameter
+	var options = {
+		zoomEnabled: true,
+                animationEnabled: true,
+		title: {
+			text: "Try Zooming - Panning"
+		},
+		axisX: {
+			labelAngle: 30
+		},
+		axisY: {
+			includeZero: false
+		},
+		data: data  // random data
+	};
+
+	$("#chartContainer").CanvasJSChart(options);
+
+});
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</body>

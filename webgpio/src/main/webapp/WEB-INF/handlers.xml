@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handlers>
+	<sensor type="dist">
+		<handler name="rawoutput" class="au.com.digitalspider.handler.RawOutputHandler">
+			<param name="velocity.template">outputRawTemplate.vm</param>
+			<param name="file.suffix">_raw.txt</param>
+		</handler>
+		<handler name="interrupt1" class="au.com.digitalspider.handler.InterruptOutputHandler">
+			<param name="interrupt.history.length">10</param>
+			<param name="velocity.template">outputHitTemplate.vm</param>
+			<param name="file.suffix">_hit.txt</param>
+		</handler>
+		<handler name="interrupt2" class="au.com.digitalspider.handler.InterruptOutputHandler">
+			<param name="interrupt.history.length">20</param>
+			<param name="velocity.template">outputAvgTemplate.vm</param>
+			<param name="file.suffix">_avg.txt</param>
+		</handler>
+		<!-- 
+		<handler name="broadcast1" class="au.com.digitalspider.handler.BroadcastOutputHandler">
+			<param name="broadcast.dest">10.1.1.9:8111,10.1.1.3:8111</param>
+		</handler>
+		 -->
+	</sensor>
+	<sensor type="temp">
+		<handler name="interrupt9" class="au.com.digitalspider.handler.InterruptOutputHandler">
+			<param name="velocity.template">outputHitTemplate.vm</param>
+			<param name="file.suffix">_low.txt</param>
+		</handler>
+	</sensor>	
+</handlers>

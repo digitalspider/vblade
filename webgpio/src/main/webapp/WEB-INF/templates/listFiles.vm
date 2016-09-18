@@ -1,0 +1,9 @@
+<ul>
+#foreach( $file in $files )
+	#set ( $chipId =  $file.split("_")[1] )
+	<li><a href='$baseUrl/$chipId/$file'>$file</a> | 
+		<a href='$baseUrl/$chipId/$file.replace(".txt",".json")'>json</a> | 
+		<a href='$baseUrl/$chipId/$file.replace(".txt",".xml")'>xml</a> |
+		<a href='$baseUrl/$chipId/$file.replace(".txt",".chart")'>chart</a></li>
+#end
+</ul>

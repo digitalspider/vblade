@@ -1,0 +1,2 @@
+#set ( $val = $Float.parseFloat($value) )
+#if ( $val < $avg*0.8 || $val > $avg*1.2 )$date|$time|$ip|$heap|$value|$avg#end
